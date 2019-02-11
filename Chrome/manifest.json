@@ -1,0 +1,18 @@
+{
+  "name": "Youtube UnDistractor",
+  "short_name": "yt_undistractor",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Enables you to toggle distractions on and off, letting you focus on your work.",
+  "browser_action": {},
+  "icons": { "16": "icon16.png",
+           "48": "icon48.png",
+          "128": "icon128.png" },
+  "content_scripts": [
+    {
+      "matches": ["https://*.youtube.com/*"],
+      "js": ["jquery.min.js", "waitForKeyElements.js" ,"content.js"]
+    }
+  ],
+  "permissions": ["storage"]
+}
